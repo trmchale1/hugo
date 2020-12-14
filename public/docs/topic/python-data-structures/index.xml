@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tim&#39;s Blog</title>
+    <link>/docs/topic/python-data-structures/</link>
+    <description>Recent content on Tim&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/docs/topic/python-data-structures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/docs/topic/python-data-structures/queue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/topic/python-data-structures/queue/</guid>
+      <description>Python Data Structures #  Code and explanation for a Python Data Structure
+Queue #  First we look at the queue data structure. A queue is a simple list where we add to the back and remove from the front. Below is the class structure of the list in python, creating a Node - when initiated keeps track of it&amp;rsquo;s head, tail and the next element in the list.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/topic/python-data-structures/stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/topic/python-data-structures/stack/</guid>
+      <description>Python Data Structures #  Code and explanation for a Python Data Structure
+Stack #  A stack is a fundamental data structure. It is used in the Operating System, memory is implemented as a stack. If we are able to visualize a stack, it will help us visualize some of the more complex ideas in computer science.
+Below the python class structure for a Stack.
+class Stack: class _Node: __slots__ = &amp;#39;element&amp;#39;, &amp;#39;next&amp;#39; def __init__(self,element, next): self.</description>
+    </item>
+    
+  </channel>
+</rss>

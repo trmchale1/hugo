@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tim&#39;s Blog</title>
+    <link>/docs/topic/go-data-structures/</link>
+    <description>Recent content on Tim&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/docs/topic/go-data-structures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/docs/topic/go-data-structures/queue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/topic/go-data-structures/queue/</guid>
+      <description>Go Data Structures #  Code and explanation of a Go data structure
+Queue #  First we look at the queue data structure. A queue is a simple list where we add to the back and remove from the front. Below is the class structure of the list in Go, creating a Node - when initiated keeps track of it’s head, tail and the next element in the list.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/topic/go-data-structures/stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/topic/go-data-structures/stack/</guid>
+      <description>Go Data Structures #  Code and explanation for a Go Data Structure
+Stack #  A stack is a fundamental data structure. It is used in the Operating System, memory is implemented as a stack. If we are able to visualize a stack, it will help us visualize some of the more complex ideas in computer science.
+Below the Go class structure for a Stack.
+type Stack struct { Head *Node int size = 0 } type Node struct { Next *Node Data interface{} } func New() *Stack { emptyNode := &amp;amp;Node{ Next: nil, Data: nil, } return &amp;amp;Stack{ Head: emptyNode, size: 0, } } Pushing onto and Popping off of the Stack #  Algorithms for pushing onto and popping off of the Stack, using a linked list.</description>
+    </item>
+    
+  </channel>
+</rss>

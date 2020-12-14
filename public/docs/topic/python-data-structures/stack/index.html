@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.79.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Python Data Structures #  Code and explanation for a Python Data Structure
+Stack #  A stack is a fundamental data structure. It is used in the Operating System, memory is implemented as a stack. If we are able to visualize a stack, it will help us visualize some of the more complex ideas in computer science.
+Below the python class structure for a Stack.
+class Stack: class _Node: __slots__ = &#39;element&#39;, &#39;next&#39; def __init__(self,element, next): self.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="Python Data Structures #  Code and explanation for a Python Data Structure
+Stack #  A stack is a fundamental data structure. It is used in the Operating System, memory is implemented as a stack. If we are able to visualize a stack, it will help us visualize some of the more complex ideas in computer science.
+Below the python class structure for a Stack.
+class Stack: class _Node: __slots__ = &#39;element&#39;, &#39;next&#39; def __init__(self,element, next): self." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/topic/python-data-structures/stack/" />
+
+<title>Stack | Tim&#39;s Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
+<script defer src="/en.search.min.0895e63d4f057678607415a5102163e157ab44684b99fa27b0ff7ba06719a4ca.js" integrity="sha256-CJXmPU8FdnhgdBWlECFj4VerRGhLmfonsP97oGcZpMo="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Tim&#39;s Blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/abt_tim/" class="">About Tim</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Topic</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-385ac15c88d50019b3fae0dc6c02e7e8" class="toggle"  />
+    <label for="section-385ac15c88d50019b3fae0dc6c02e7e8" class="flex justify-between">
+      <a href="/docs/topic/go-data-structures/" class="">Go Data Structures</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/topic/go-data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/topic/go-data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-08a82afa7148dfccc3afd304d05c4fe0" class="toggle" checked />
+    <label for="section-08a82afa7148dfccc3afd304d05c4fe0" class="flex justify-between">
+      <a href="/docs/topic/python-data-structures/" class="">Python Data Structures</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/topic/python-data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/topic/python-data-structures/stack/" class=" active">Stack</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Stack</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#stack">Stack</a>
+      <ul>
+        <li><a href="#pushing-onto-and-popping-off-of-the-stack">Pushing onto and Popping off of the Stack</a></li>
+        <li><a href="#links">Links</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="python-data-structures">
+  Python Data Structures
+  <a class="anchor" href="#python-data-structures">#</a>
+</h1>
+<p>Code and explanation for a Python Data Structure</p>
+<h2 id="stack">
+  Stack
+  <a class="anchor" href="#stack">#</a>
+</h2>
+<p>A stack is a fundamental data structure. It is used in the Operating System, memory is implemented as a stack. If we are able to visualize a stack, it will help us visualize some of the more complex ideas in computer science.</p>
+<p>Below the python class structure for a Stack.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">class Stack:
+    class _Node:
+        __slots__ = &#39;element&#39;, &#39;next&#39;
+
+        def __init__(self,element, next):
+            self._element = element
+            self._next = next
+
+        def __init__(self):
+            self._head = None
+            self._size = 0
+</code></pre></div><h3 id="pushing-onto-and-popping-off-of-the-stack">
+  Pushing onto and Popping off of the Stack
+  <a class="anchor" href="#pushing-onto-and-popping-off-of-the-stack">#</a>
+</h3>
+<p>Algorithms for pushing onto and popping off of the Stack, using a linked list.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl">    def push(self,e):
+            self._head = self._Node(e,self._head)
+            self._size += 1
+
+    def pop(self):
+            if self.is_empty():
+                raise Empty(&#39;Stack is empty&#39;)
+            answer = self._head._element
+            self._head = self._head._next
+            self._size -= 1
+            return answer
+</code></pre></div><h3 id="links">
+  Links
+  <a class="anchor" href="#links">#</a>
+</h3>
+<p>Code with the full program and helper methods below</p>
+
+
+
+  
+  
+
+
+<a  href="https://github.com/trmchale1/py_algos/blob/main/stack.py"   target="_blank"  class="book-btn">
+  Code
+</a>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#stack">Stack</a>
+      <ul>
+        <li><a href="#pushing-onto-and-popping-off-of-the-stack">Pushing onto and Popping off of the Stack</a></li>
+        <li><a href="#links">Links</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
