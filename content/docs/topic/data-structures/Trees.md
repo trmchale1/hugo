@@ -1,10 +1,10 @@
-# Python Data Structures
+# Data Structures
 
-Code and explanation for a Python Data Structure
+Psuedo-code and explanation for a Data Structure, based upon CLRS
 
 ## Trees
 
-Trees provide a natural organization for data, and are used in file systems, websites and GUIs. It is an abstract data type that stores elements hierarchically, each element has a parent and one or more children.  
+Trees provide a natural organization for data, and are used in file systems, websites and GUIs. It is an abstract data type that stores elements hierarchically, each element has a parent and one or more children.
 
 ## Tree Traversals
 
